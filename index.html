@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<link rel="icon" type="image/svg+xml" href="images/calc.png" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+    <script src="simplex.js"></script> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/simplex.css">
+   
+    <title>Simplex App</title>
+
+  </head>
+  <body>
+		<nav class="navbar col-md-12">
+			<button onclick="location.reload();" class="btn btn-secondary">Reiniciar</button>
+		</nav>
+		<br>	
+	  <div class="container align-itens-center">
+		<header class="flex flex-col items-center">
+			<img src="images/math.png" alt="" style="height: 160px ;">
+			<h1 class="text-gray-100 font-bold font-sans text-2xl">Simplex App</h1>
+			<p class="text-gray-100 font-sans text-md">Maximize lucros ou minimize gastos!</p>
+		  </header>
+			<div id="startInputs">
+			  	<div class="row">	 
+				  	<div class="col-md-12">
+						  
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="max" name="maxMin" class="custom-control-input" checked>
+							<label class="custom-control-label" for="max">Maximizar</label>
+						  </div>
+						  <div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="min" name="maxMin" class="custom-control-input">
+							<label class="custom-control-label" for="min">Minimizar</label>
+						  </div>
+
+				  	</div>
+				</div>
+				<br>
+
+				<div class="row">	 
+				  	<div class="col-md-12">
+				  		<label class="col-md-6">Quantidade de variaveis de decisão</label>
+			  			<input type="number" id="numVar" name="numVar">
+				  	</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<label class="col-md-6">Quantidade de restrições</label>
+						<input type="number" id="numRes" name="numRes">
+						
+					</div>
+				</div>
+				<br>
+	
+				<div class="row"> 	
+				  	<div class="offset-md-3 col-md-6 offset-md-3">
+				  		<button id="primeira" onclick="verificar()"class="btn btn-primary">Próximo Passo</button>
+				  	</div>
+				</div>
+
+			</div>			
+			<div id="auxDiv" style="display: none;"></div>
+		
+	  		
+		</div>
+		 
+  	</div>
+    
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function verificar() {
+			if($('#numRes').val() > 10 ||
+				$('#numRes').val() < 1  ||
+				$('#numVar').val() > 10 ||
+				$('#numVar').val() < 1) {
+				alert('Quantidade de variáveis da Decição ou Restrição tem que ser menor que 10 ou maior que 1');
+			} else {
+				primeira()
+			}
+		}
+	</script>
+  </body>
+</html>

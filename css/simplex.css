@@ -1,0 +1,67 @@
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background: rgb(18 18 20);
+	color: #fff;
+	transition: background-color 5s ease;
+	font-size: 20pt;
+}
+hr{
+	border-color : white;
+	background-color : white;
+	color: white;
+}
+
+.hint { display: none; color: white; font-style: italic; }
+
+
+
+#tableInicial{
+	margin-top: 10px;
+}
+table{
+	table-layout: fixed;
+}
+
+table td:first-child {
+	background-color: rgb(51, 133, 196);
+}
+
+table tr:first-child {
+	background-color: rgb(51, 133, 196);
+}
+
+
+table tr:first-child td:first-child{
+	background-color: rgba(84, 196, 84, 0.986);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0; 
+
+}
+button{
+	margin: 3px;
+	font-size: 22pt;
+}
+
+
+input{
+	width: 100px;
+	text-align: center;
+	border-radius: 3px;
+	background-color: gray;
+}
+span.input-group-text{
+	font-size: 22pt;
+	background: rgb(18 18 20);
+	color: white;
+}
+input-group-append{
+border-color: rgb(18 18 20);
+}
+button#firstPhase, button#resolver, button#stepByStep, button#again {
+	font-size: 18pt;
+}
